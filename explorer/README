@@ -1,0 +1,2 @@
+Host address and port must be set in client (c8.cpp).
+Port number must be set in server (s8.cpp)
