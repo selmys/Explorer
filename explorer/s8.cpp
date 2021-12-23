@@ -9,11 +9,29 @@
 #include <unistd.h>
 #include <string.h>
 
-#include "globals.h"
 #include "classes.h"
 
-int main()
-{
+int main() {
+    char caverns[17][200]={
+ "You are standing at the entrance to a large man-made\nstructure.",
+ "You are in the center of what appears to have been\na foyer of some kind with tall rusty coloured walls.",
+ "You are standing in a room with green moss covering\nthe walls.",
+ "You are inside a large open area where the floor is covered\nwith a blue mist.",
+ "The room here is oval with a large oak rectangular table in its center.",
+ "You are in the middle of a cube-shaped room. The air is thin here.",
+ "This room has a glass ceiling but you can't see through it\nbecause of the dirt covering it.",
+ "In front of you is a very long room. The ceiling is low and damaged\nin some places.",
+ "You are in a strange place. The light is dim and the walls seem to be closing\nin on you.",
+ "The room you are in is triangular. The ceiling is so high that you can't see it.",
+ "A small room with a window. The room has no furniture but has footprints in the\ndust on the floor.",
+ "You are at one end of an enormous room. There are many concrete pillars evenly\nspaced like pebbles on a chessboard.",
+ "You are in a dead-end room. The only way out is the way you came in.",
+ "You are in a very low passageway. There isn't enough headroom to stand\nup.",
+ "You are in the middle of a room shaped like an upsidedown cone.\nThere is a tiny hole at the top through which a pencil-like ray of light\nenters and hits the floor near your feet.",
+ "This room is shaped like a fat cigar. There is smoke filtering through the\ncracks in the floor.",
+ "You are in the corner of a square room. The ceiling has open air ducts\neverywhere."
+}; 
+
     int lead[6];
     cave *c=new cave;
     explorer *e;

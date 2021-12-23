@@ -63,8 +63,7 @@ void parse(char *ch){
    else
       strcpy(ch,"?");
 } 
-int main()
-{
+int main() {
     int sockfd;
     int len;
     struct sockaddr_in address;
@@ -82,7 +81,7 @@ int main()
     result = connect(sockfd, (struct sockaddr *)&address, len);
 
     if(result == -1) {
-        perror("oops: client7");
+        perror("oops: client8");
         exit(1);
     }
     FD_ZERO(&inputs);
@@ -122,7 +121,7 @@ int main()
                        printf("in the north-western part of what once was the United States.\n");
                        printf("It is the year 2525. Zager and Evans have been\n");
                        printf("dead for half a millennium. You have found this place after\n");
-                       printf("studying historical records you have discovered while browsing\n");
+                       printf("studying historical records discovered while browsing\n");
                        printf("abandand web sites in your research.\n");
                        printf("You can move about by entering directions such as north,\n");
                        printf("south, east, or west as well as up and down.\n");
