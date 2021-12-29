@@ -12,6 +12,9 @@
 #include <string.h>
 #include <ctype.h>
 
+#define SERVER_PORT 4663
+#define SERVER_ADDRESS "192.168.1.203"
+
 void tolowercase(char *ch){
    int i;
    for(i=0;i<strlen(ch);i++)
@@ -75,8 +78,8 @@ int main() {
     sockfd = socket(AF_INET, SOCK_STREAM, 0);
     //sockfd = socket(AF_I2.7NET, SOCK_STREAM, 0);
     address.sin_family = AF_INET;
-    address.sin_addr.s_addr = inet_addr("192.168.2.7");
-    address.sin_port = htons(4663);
+    address.sin_addr.s_addr = inet_addr(SERVER_ADDRESS);
+    address.sin_port = htons(SERVER_PORT);
     len = sizeof(address);
     result = connect(sockfd, (struct sockaddr *)&address, len);
 
@@ -122,7 +125,7 @@ int main() {
                        printf("It is the year 2525. Zager and Evans have been\n");
                        printf("dead for half a millennium. You have found this place after\n");
                        printf("studying historical records discovered while browsing\n");
-                       printf("abandand web sites in your research.\n");
+                       printf("abandoned web sites in your research.\n");
                        printf("You can move about by entering directions such as north,\n");
                        printf("south, east, or west as well as up and down.\n");
                        printf("If you find an object you want, use get or put to take\n");

@@ -11,6 +11,8 @@
 
 #include "classes.h"
 
+#define SERVER_PORT 4663
+
 int main() {
     char caverns[17][200]={
  "You are standing at the entrance to a large man-made\nstructure.",
@@ -97,7 +99,7 @@ int main() {
 
     server_address.sin_family = AF_INET;
     server_address.sin_addr.s_addr = htonl(INADDR_ANY);
-    server_address.sin_port = htons(4663);
+    server_address.sin_port = htons(SERVER_PORT);
     server_len = sizeof(server_address);
 
     bind(server_sockfd, (struct sockaddr *)&server_address, server_len);
@@ -117,7 +119,7 @@ int main() {
             (fd_set *)0, (struct timeval *) 0);
 
         if(result < 1) {
-            perror("server7");
+            perror("server8");
             exit(1);
         }
         for(fd = 0; fd < FD_SETSIZE; fd++) {
